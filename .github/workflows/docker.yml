@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Publish to Github Docker Package Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.21
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: oam-dev/kubevela/vela-core
           username: ${{ github.actor }}
@@ -17,7 +17,7 @@ jobs:
           registry: docker.pkg.github.com
           tags: "latest"
       - name: Publish to Docker Hub Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.21
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: oamdev/vela-core
           username: ${{ secrets.DOCKER_USERNAME }}
